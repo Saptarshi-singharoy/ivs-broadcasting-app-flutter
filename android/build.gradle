@@ -1,0 +1,43 @@
+buildscript {
+    ext {
+        compileSdkVersion = 33
+        minSdkVersion = 21
+        targetSdkVersion = 33
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://amazon-ivs-android-sdk.s3.amazonaws.com/android/releases'
+        }
+    }
+    // dependencies {
+    //     // Specify the Android Gradle Plugin version compatible with Gradle 7.6.3
+    //     classpath ('com.android.tools.build:gradle:7.4.2')
+
+    //     // Kotlin Gradle plugin (required if your project uses Kotlin)
+    //     classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10")
+    // }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/highkeen2/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/highkeen2/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/highkeen2/Projects/Flutter/ivs_broadcast_app/android/app/.cxx/Debug/344z3851/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/highkeen2/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/highkeen2/Projects/Flutter/ivs_broadcast_app/android/app/.cxx/Debug/344z3851/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
