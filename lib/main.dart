@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ivs_broadcast_app/broad_cast_widget.dart';
+import 'package:ivs_broadcast_app/ivs_player_widget.dart';
 import 'package:ivs_broadcaster/Broadcaster/ivs_broadcaster.dart';
 import 'package:ivs_broadcaster/Player/Widget/ivs_player_view.dart';
 import 'package:ivs_broadcaster/Player/ivs_player.dart';
@@ -18,7 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BroadCastWidget(),
+      home: const Column(
+        children: [
+          Expanded(child: BroadCastWidget()),
+          Expanded(child: PlayerWidget())
+        ],
+      ),
     );
   }
 }
