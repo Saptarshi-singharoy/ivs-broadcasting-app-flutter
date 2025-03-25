@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1033530764999",
+    "project_id": "ivs-streaming-app",
+    "storage_bucket": "ivs-streaming-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033530764999:android:823bd637611ef45e3d58e2",
+        "android_client_info": {
+          "package_name": "com.example.ivs_broadcast_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyOi2dbQcEpnRob3wZfNjOVVNM0hZPbDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,14 +4,18 @@ import 'package:ivs_broadcaster/Player/ivs_player.dart';
 // import 'package:ivs_broadcaster/Player/ivs_player_view.dart';
 
 class IVSPlayerWidget extends StatefulWidget {
+  final String playbackUrl;
+
+  IVSPlayerWidget({super.key, required this.playbackUrl});
+
   @override
   ivsPlayerWidgetState createState() => ivsPlayerWidgetState();
 }
 
 class ivsPlayerWidgetState extends State<IVSPlayerWidget> {
   late IvsPlayer ivsPlayer;
-  final String _streamUrl =
-      'https://eab30f14a9fe.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.730335194207.channel.Y9CFVXzZxIcK.m3u8';
+  // final String _streamUrl = widget.playbackUrl;
+  // 'https://eab30f14a9fe.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.730335194207.channel.Y9CFVXzZxIcK.m3u8';
 
   @override
   void initState() {
@@ -19,7 +23,7 @@ class ivsPlayerWidgetState extends State<IVSPlayerWidget> {
     ivsPlayer = IvsPlayer();
     ivsPlayer.initialize();
     ivsPlayer.startPlayer(
-      _streamUrl,
+      widget.playbackUrl,
       autoPlay: true,
     );
   }
@@ -55,7 +59,11 @@ class PlayerWidget extends StatelessWidget {
     return MaterialButton(
       onPressed: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => IVSPlayerWidget()),
+          MaterialPageRoute(
+              builder: (context) => IVSPlayerWidget(
+                    playbackUrl:
+                        'https://eab30f14a9fe.ap-south-1.playback.live-video.net/api/video/v1/ap-south-1.730335194207.channel.Y9CFVXzZxIcK.m3u8',
+                  )),
         );
       },
       color: Colors.amber[600],
