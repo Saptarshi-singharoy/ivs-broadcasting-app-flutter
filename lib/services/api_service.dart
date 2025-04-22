@@ -3,7 +3,7 @@ import 'dart:convert';
 
 class ApiService {
   // Replace with your Node.js server URL
-  static const String _baseUrl = 'http://192.168.0.100:3000';
+  static const String _baseUrl = 'http://192.168.1.2:3000';
 
   // Method to create a channel
   static Future<Map<String, dynamic>> createChannel(bool isPrivate) async {

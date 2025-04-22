@@ -44,6 +44,7 @@ class _BroadCastWidgetState extends State<BroadCastWidget> {
         //camerType: CameraType.BACK,
       );
       await ivsBroadcaster?.startBroadcast();
+
       await ApiService.sendNotifications("New Notification",
           {"success": true, "message": "notification came successfully"});
     } catch (e) {
